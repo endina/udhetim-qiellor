@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UDHËTIM QIELLOR</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,12 +16,23 @@
             <img src="images/logo1.jpg" alt="Logo">
         </div>
         <div class="navbar-title">UDHËTIM QIELLOR</div>
-        <ul class="nav-list">
+        <input type="checkbox" id="menu-toggle" />
+
+        <label for="menu-toggle" class="menu-icon">
+        
+            <i class="fa fa-bars" ></i>
+            </label>
+        <ul class="nav-list" id="nav-list">
+            <label for="menu-toggle" class="close-icon">
+                <i class="fa fa-window-close"></i>
+            </label>
+
             <li><a href="#home" class="active">Ballina</a></li>
             <li><a href="#about">Universi</a></li>
             <li><a href="#projects">Observimi</a></li>
             <li><a href="#contact">Rreth nesh</a></li>
         </ul>
+        
     </nav>
 
     <!-- Hero Section -->
