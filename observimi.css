@@ -237,3 +237,49 @@ footer {
 #menu-toggle:checked ~ .nav-list {
     right: 0;
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-list {
+        position: fixed;
+        background-color:#1b2355;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 5;
+        transition: 0.3s;
+        padding-top: 60px;
+        display: block;
+    }
+    
+    .nav-list li {
+        display: block;
+        margin: 20px 0;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 30px;
+    }
+
+    .close-icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+}
