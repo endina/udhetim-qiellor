@@ -140,27 +140,29 @@ body {
 }
 
 .event-card img {
-    width: 50%;
-    height: 100px;
+    width: 100%;
+    height: 160px;
     object-fit: cover;
-    margin:  auto 250px;
     display: block;
-    border-radius: 6px 6px 0 0;
+    border-radius: 80px 80px 0 0;
 
 }
 
 .card-content {
-    padding: 20px;
+    padding: 30px;
+    text-align: center;
 }
+    
+    
 
 .card-content h3 {
     color: #00c3ff;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .card-content p {
-    font-size: 0.95rem;
+    font-size: 20px;
     color: #ccc;
 }
 
