@@ -166,6 +166,16 @@ body {
     color: #ccc;
 }
 
+.time {
+    font-size: 18px;
+    color: #00c3ff;
+    margin-top: 10px;
+    font-weight: 600;
+    
+
+   }
+
+
 /* Footer */
 footer {
     background-color: #101010;
