@@ -294,7 +294,7 @@ footer {
         display: block;
         cursor: pointer;
         color: white;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .close-icon {
@@ -306,5 +306,15 @@ footer {
         right: 20px;
         cursor: pointer;
     }
+    .navbar-title{
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .navbar .logo img {
+        height: 50px;
+    }
+    
 
 }

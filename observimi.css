@@ -104,8 +104,8 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #00c3ff;
-    color: #121212;
+    background-color: white;
+    color: black;
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
@@ -113,6 +113,10 @@ body {
     font-size: 1rem;
     margin-top: 15px;
     transition: 0.3s;
+}
+.btn:hover {
+    background-color: #00c3ff;
+    color: black;
 }
 
 /* Calendar cards */
@@ -125,7 +129,7 @@ body {
 
 .event-card {
     background-color: #1e1e1e;
-    border-radius: 15px;
+    border-radius: 80px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 195, 255, 0.3);
     transition: transform 0.3s;
