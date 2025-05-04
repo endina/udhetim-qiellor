@@ -159,7 +159,18 @@ body {
     font-size: 1rem;
     color: #ccc;
 }
+.cta-button .btn {
+    animation: glow 2.5s infinite alternate;
+}
 
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #00c3ff;
+    }
+    100% {
+        box-shadow: 0 0 20px #00c3ff;
+    }
+}
 .cta-button .btn {
     display: inline-block;
     background-color: #00c3ff;
@@ -175,6 +186,22 @@ body {
 .cta-button .btn:hover {
     background-color: #0088cc;
 }
+@keyframes moveStars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 0;
+    }
+}
+
+.background-shape {
+    animation: moveStars 120s linear infinite;
+    background-repeat: repeat;
+    background-size: 150%;
+    animation: moveStars 80s linear infinite;
+}
+
 
 /* Footer */
 footer {
