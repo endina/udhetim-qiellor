@@ -222,6 +222,7 @@ body {
     }
     .footer-logo img {
         height: 30px;
+        margin-left: -250px;
     }
     .footer-bottom {
         font-size: 0.8rem;
