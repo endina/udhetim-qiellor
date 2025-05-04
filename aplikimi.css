@@ -1,0 +1,257 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.1);
+}
+
+/* Typography */
+.form-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #00c3ff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.form-intro {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.section-title {
+    color: #00c3ff;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #00c3ff;
+    font-size: 1.3rem;
+}
+
+/* Form Elements */
+.form-control {
+    background-color: #2d2d2d;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #00c3ff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 195, 255, 0.25);
+}
+
+.form-label {
+    display: block;
+    color: #00c3ff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-label.required::after {
+    content: " *";
+    color: #ff4d4d;
+}
+
+/* Course Options */
+.course-option {
+    background-color: #2d2d2d;
+    border-left: 4px solid #00c3ff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.course-option:hover {
+    background-color: #333;
+}
+
+.course-radio {
+    display: none;
+}
+
+.course-label {
+    display: block;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.course-name {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #00c3ff;
+    margin-bottom: 5px;
+}
+
+.course-desc {
+    display: block;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.course-radio:checked + .course-label .course-name {
+    color: #fff;
+}
+
+/* Terms and Submit */
+.terms-group {
+    margin: 25px 0;
+}
+
+.terms-check {
+    margin-right: 10px;
+}
+
+.terms-label {
+    color: #aaa;
+    cursor: pointer;
+}
+
+.terms-link {
+    color: #00c3ff;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background-color: #00c3ff;
+    color: #121212;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0099cc;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #00c3ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #0099cc;
+    text-decoration: underline;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.footer-logo img {
+    height: 40px;
+    margin-bottom: -50px;
+    margin-left: -60px;
+}
+
+.footer-logo h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00c3ff;
+}
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo h3 {
+        font-size: 1.2rem;
+    }
+    .footer-logo img {
+        height: 30px;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding: 15px;
+    }
+    
+    .form-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-intro {
+        font-size: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo h3 {
+        font-size: 1.2rem;
+    }
+    .footer-logo img {
+        height: 30px;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
