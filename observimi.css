@@ -328,5 +328,8 @@ footer {
     .telescope-section h2 {
         font-size: 1.7rem;
     }
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
 
 }

@@ -421,5 +421,8 @@ footer {
     .footer-links ul li {
         margin-bottom: 5px;
     }
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
 }
     
