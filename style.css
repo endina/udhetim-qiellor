@@ -13,8 +13,47 @@ body {
     background-color: #121212;
     color: white;
 }
-
-/* Navbar */
+/* Orbitron */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  /* Roboto */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  /* Poppins */
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;

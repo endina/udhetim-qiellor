@@ -283,13 +283,11 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .navbar-title {
+  .navbar-title {
         font-size: 30px;
-        margin: 0 auto;
+        margin: 0 20px;
+        text-align: center;
+        
     }
 
     .navbar .logo img {
