@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDHËTIM QIELLOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo1.jpg" alt="Logo">
+        </div>
+        <div class="navbar-title">UDHËTIM QIELLOR</div>
+        <input type="checkbox" id="menu-toggle" />
+
+        <label for="menu-toggle" class="menu-icon">
+        
+            <i class="fa fa-bars" ></i>
+            </label>
+        <ul class="nav-list" id="nav-list">
+            <label for="menu-toggle" class="close-icon">
+                <i class="fa fa-window-close"></i>
+            </label>
+
+            <li><a href="index.html" >Ballina</a></li>
+            <li><a href="universi.html" class="active">Universi</a></li>
+            <li><a href="observimi.html">Observimi</a></li>
+            <li><a href="rrethnesh.html">Rreth nesh</a></li>
+        </ul>
+        
+    </nav>
+    <div class="planet-navigation">
+        <a href="universi.html" class="planet-link" class="active">01</a>
+        <a href="black.html" class="planet-link">02</a>
+      </div>
+      
+    
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+/* Orbitron */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  /* Roboto */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  /* Poppins */
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  /* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo img {
+    height: 65px;
+}
+
+.navbar-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 43px;
+    color: #00c3ff;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: #00c3ff;
+    color: #121212;
+}
+.planet-navigation {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .planet-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0d1b2a;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .planet-link:hover {
+    background-color: #1f4068;
+  }
+
+/* Unique styles for this page */
+.cosmic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        
+        .cosmic-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .cosmic-number {
+            font-family: 'Orbitron', sans-serif;
+            color: #00c3ff;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .cosmic-title {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+        
+        .cosmic-subtitle {
+            font-family: 'Poppins', sans-serif;
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Black Hole Section */
+        .black-hole-section {
+            background: rgba(28, 28, 28, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 80px;
+            border-left: 5px solid #00c3ff;
+        }
+        
+        .cosmic-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .cosmic-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cosmic-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cosmic-name {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .cosmic-description {
+            font-family: 'Poppins', sans-serif;
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .cosmic-facts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .cosmic-fact {
+            background: rgba(0, 195, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #00c3ff;
+        }
+        
+        .cosmic-label {
+            font-family: 'Poppins', sans-serif;
+            color: #00c3ff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .cosmic-value {
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* Satellite Section */
+        .satellite-section {
+            background: rgba(28, 28, 28, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            border-left: 5px solid #ff6b00;
+        }
+        
+        .satellite-fact {
+            background: rgba(255, 107, 0, 0.1);
+            border-left: 3px solid #ff6b00;
+        }
+        
+        /* Alternate layout */
+        .cosmic-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+/* Footer */
+footer {
+    background-color: #101010;
+    padding: 50px 20px 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00c3ff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00c3ff;
+}
+
+.footer-socials .social-icons a {
+    margin: 0 10px;
+}
+
+.footer-socials img {
+    height: 33px;
+}
+.footer-socials h4 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+}
+#menu-toggle:checked ~ .nav-list {
+    right: 0;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-section {
+        flex-direction: column;
+    }
+
+    .image-buttons-section {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        position: fixed;
+        background-color:#1b2355;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 5;
+        transition: 0.3s;
+        padding-top: 60px;
+        display: block;
+    }
+    
+    .nav-list li {
+        display: block;
+        margin: 20px 0;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+    }
+
+    .close-icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .navbar-title{
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .navbar .logo img {
+        height: 50px;
+    }
+    .hero h1 {
+        font-size: 2.3 rem;
+    }
+   .background-shape {
+        width: 100%;
+        height: 80%;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .image-container {
+        max-width: 90%;
+    }
+    .image-container img {
+        width: 100%;
+    }
+    .cta-text h2 {
+        font-size: 1.5rem;
+    }
+    .cta-text p {
+        font-size: 0.9rem;
+    }
+    .footer-logo h3 {
+        font-size: 1.2rem;
+    }
+    .footer-logo img {
+        height: 30px;
+    }
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    .footer-socials img {
+        height: 25px;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+    .footer-links ul li {
+        margin-bottom: 5px;
+    }
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
+    .cosmic-item {
+                flex-direction: column;
+            }
+            
+            .cosmic-item:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .cosmic-facts {
+                grid-template-columns: 1fr;
+            }
+            
+            .cosmic-title {
+                font-size: 2rem;
+            }
+            
+            .cosmic-name {
+                font-size: 2rem;
+            }
+}
+    
+
+    </style>
+
+     <!-- Main Content -->
+     <div class="cosmic-container">
+        <div class="cosmic-header">
+            <h1 class="cosmic-title">Vrimat e Zeza dhe Satelitët</h1>
+            <p class="cosmic-subtitle">Eksploroni misteret e vrimave të zeza dhe teknologjinë revolucionare të satelitëve artificialë</p>
+        </div>
+        
+        <!-- Black Hole Section -->
+        <div class="black-hole-section">
+            <h2 class="cosmic-name">Vrimat e Zeza</h2>
+            <p class="cosmic-description">
+                Vrimat e zeza janë një nga fenomenet më misterioze dhe fuqishme në univers. Këto objekte astronomike kanë gravitet aq të fortë sa asgjë - as drita - nuk mund të shpëtojë prej tyre. Formohen kur yje shumë masive shpërbëhen në fund të jetës së tyre.
+            </p>
+            
+            <div class="cosmic-item">
+                <img src="images/blackhole.jpg" alt="Black Hole" class="cosmic-image">
+                <div class="cosmic-info">
+                    <h3 class="cosmic-name">Horizonti i Ngjarjeve</h3>
+                    <p class="cosmic-description">
+                        Pika e pa kthimit e një vrime të zeze. Çdo gjë që kalon këtë kufi është tërhequr përgjithmonë në vrimën e zezë. As drita nuk mund të shpëtojë nga tërheqja e saj, duke i dhënë vrimës së zezë emrin e saj.
+                    </p>
+                    <div class="cosmic-facts">
+                        <div class="cosmic-fact">
+                            <div class="cosmic-label">Llojet</div>
+                            <div class="cosmic-value">Yjore, Supermasive</div>
+                        </div>
+                        <div class="cosmic-fact">
+                            <div class="cosmic-label">Masa</div>
+                            <div class="cosmic-value">3 deri 66 MILIARD M☉</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cosmic-item">
+                <div class="cosmic-info">
+                    <h3 class="cosmic-name">Rrezatimi Hawking</h3>
+                    <p class="cosmic-description">
+                        Sipas fizikanit Stephen Hawking, vrimat e zeza nuk janë plotësisht të zeza. Ato lëshojnë një lloj rrezatimi termik për shkak të efekteve kuantike pranë horizontit të ngjarjeve. Ky rrezatim shkakton që vrimat e zeza të humbasin masë dhe përfundimisht të avullojnë.
+                    </p>
+                    <div class="cosmic-facts">
+                        <div class="cosmic-fact">
+                            <div class="cosmic-label">Zbuluar</div>
+                            <div class="cosmic-value">1974</div>
+                        </div>
+                        <div class="cosmic-fact">
+                            <div class="cosmic-label">Koha e Avullimit</div>
+                            <div class="cosmic-value">10^67 deri 10^100 vite</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/hawking.jpg" alt="Hawking Radiation" class="cosmic-image">
+            </div>
+        </div>
+        
+        <!-- Satellite Section -->
+        <div class="satellite-section">
+            <h2 class="cosmic-name">Satelitët Artificial</h2>
+            <p class="cosmic-description">
+                Satelitët artificialë janë teknologji revolucionare që kanë transformuar mënyrën se si jetojmë dhe kuptojmë botën. Ato orbitojnë rreth Tokës duke kryer detyra të ndryshme nga komunikimet deri te kërkimet shkencore.
+            </p>
+            
+            <div class="cosmic-item">
+                <img src="images/satellite.jpg" alt="Satellite" class="cosmic-image">
+                <div class="cosmic-info">
+                    <h3 class="cosmic-name">Stacioni Hapësinor Ndërkombëtar</h3>
+                    <p class="cosmic-description">
+                        ISS është laboratori më i madh në hapësirë, një projekt bashkëpunimi ndërkombëtar që orbiton Tokën çdo 90 minuta. Astronautët jetojnë dhe punojnë në ISS, duke kryer eksperimente të rëndësishme shkencore në mikrogravitet.
+                    </p>
+                    <div class="cosmic-facts">
+                        <div class="cosmic-fact satellite-fact">
+                            <div class="cosmic-label">Lartësia</div>
+                            <div class="cosmic-value">400 KM</div>
+                        </div>
+                        <div class="cosmic-fact satellite-fact">
+                            <div class="cosmic-label">Shpejtësia</div>
+                            <div class="cosmic-value">28,000 KM/H</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cosmic-item">
+                <div class="cosmic-info">
+                    <h3 class="cosmic-name">Teleskopi Hapësinor James Webb</h3>
+                    <p class="cosmic-description">
+                        JWST është teleskopi më i fuqishëm i ndërtuar ndonjëherë, duke na dhënë pamje të reja të universit. Ai vëzhgon në infra të kuqe, duke na lejuar të shohim përmes pluhurit kozmik dhe të zbulojmë sekretet e universit të hershëm.
+                    </p>
+                    <div class="cosmic-facts">
+                        <div class="cosmic-fact satellite-fact">
+                            <div class="cosmic-label">Lëshuar</div>
+                            <div class="cosmic-value">2021</div>
+                        </div>
+                        <div class="cosmic-fact satellite-fact">
+                            <div class="cosmic-label">Distanca</div>
+                            <div class="cosmic-value">1.5 MILION KM</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/jameswebb.jpg" alt="James Webb Telescope" class="cosmic-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo1.jpg" alt="Logo">
+                <h3>UDHËTIM QIELLOR</h3>
+            </div>
+            <div class="footer-links">
+                
+                <ul>
+                    <li><a href="politikat.html">Politikat e privatsisë</a></li>
+                    <li><a href="kushtet.html">Kushtet e shërbimit</a></li>
+                    <li><a href="nakontaktoni.html">Na kontaktoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Na ndiqni</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook1.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="images/x2.jpg" alt="X"></a>
+                    <a href="#"><img src="images/instagram1.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UDHËTIM QIELLOR. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+</body>
+</html> 

@@ -70,21 +70,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
+    gap: 20px;
+    
 }
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-number {
-    font-family: 'Orbitron', sans-serif;
-    color: #00c3ff;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
 .section-title {
     font-family: 'Orbitron', sans-serif;
     color: white;
@@ -92,6 +80,28 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+.planet-navigation {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .planet-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0d1b2a;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .planet-link:hover {
+    background-color: #1f4068;
+  }
+  
 
 .destination-content {
     display: flex;
