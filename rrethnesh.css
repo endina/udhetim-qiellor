@@ -41,6 +41,7 @@ body {
 .nav-list {
     display: flex;
     list-style: none;
+    
 }
 
 .nav-list li {

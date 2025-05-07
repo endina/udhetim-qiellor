@@ -73,6 +73,33 @@ body {
     gap: 20px;
     
 }
+.cosmic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.cosmic-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cosmic-title {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.cosmic-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #aaa;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
 .section-title {
     font-family: 'Orbitron', sans-serif;
     color: white;
@@ -112,9 +139,10 @@ body {
 
 .destination-image {
     flex: 1;
-    min-width: 300px;
+    width: 100%;
     max-width: 500px;
     border-radius: 10px;
+    height: auto;
     box-shadow: 0 20px 40px rgba(0, 195, 255, 0.2);
 }
 
@@ -254,11 +282,7 @@ footer {
         text-align: center;
     }
 
-    .cta-section {
-        flex-direction: column;
-    }
-
-    .image-buttons-section {
+   .image-buttons-section {
         flex-direction: column;
     }
 

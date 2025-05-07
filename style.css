@@ -80,6 +80,7 @@ body {
 .nav-list {
     display: flex;
     list-style: none;
+    transition: right 0.3s ease-in-out;
 }
 
 .nav-list li {
