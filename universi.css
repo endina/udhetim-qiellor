@@ -353,7 +353,9 @@ footer {
     .destination-content {
         flex-direction: column;
     }
-    
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
     .destination-content:nth-child(even) {
         flex-direction: column;
     }
