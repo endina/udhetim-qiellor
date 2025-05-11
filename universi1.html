@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDHËTIM QIELLOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo1.jpg" alt="Logo">
+        </div>
+        <div class="navbar-title">UDHËTIM QIELLOR</div>
+        <input type="checkbox" id="menu-toggle" />
+
+        <label for="menu-toggle" class="menu-icon">
+        
+            <i class="fa fa-bars" aria-label="Open menu" ></i>
+            </label>
+        <ul class="nav-list" id="nav-list">
+            <label for="menu-toggle" class="close-icon">
+                <i class="fa fa-window-close" aria-label="Close menu"></i>
+            </label>
+
+            <li><a href="index.html">Ballina</a></li>
+            <li><a href="universi1.html" class="active">Universi</a></li>
+            <li><a href="observimi.html">Observimi</a></li>
+            <li><a href="rrethnesh.html">Rreth nesh</a></li>
+        </ul>
+        
+    </nav>
+    <style>
+         :root {
+            --space-dark: #0A0E17;
+            --space-blue: #00c3ff;
+            --space-grey: #6B7280;
+            --space-light: #E0E7FF;
+        }
+         /* Main Content - Space Theme */
+         .main-content {
+            flex: 1;
+            padding: 2rem;
+            background: 
+                linear-gradient(rgba(10, 14, 23, 0.9), rgba(10, 14, 23, 0.9)),
+                url('images/spaceimg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .moon-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .moon-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .moon-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 30px rgba(0, 195, 255, 0.4));
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .step-number {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--space-blue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--space-light);
+            margin: 0 0 1.5rem 0;
+            line-height: 1.2;
+        }
+        
+        h1 span {
+            color: var(--space-blue);
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            border-left: 2px solid var(--space-blue);
+            padding-left: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--space-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+        }
+        
+        /* Destination tabs */
+        .tabs {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tab {
+            cursor: pointer;
+            padding-bottom: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--space-grey);
+            transition: all 0.3s ease;
+        }
+        
+        .tab:hover,
+        .tab.active {
+            color: var(--space-blue);
+            border-bottom: 2px solid var(--space-blue);
+        }
+        .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+        @media (max-width: 768px) {
+            .moon-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .moon-image {
+                margin-bottom: 3rem;
+            }
+            
+            p {
+                max-width: 100%;
+            }
+            
+            .stats {
+                justify-content: center;
+            }
+        }        
+    </style>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="moon-section">
+            <div class="moon-image">
+                <img src="mooooon.jpg" alt="The Moon"> <!-- Local image -->
+            </div>
+            
+            <div class="content">
+                <div class="step-number">EKSPLORONI SISTEMIN TONË DIELLOR</div>
+                
+                <div class="tabs">
+                    <div class="tab active">Hëna</div>
+                    <div class="tab">Marsi</div>
+                    <div class="tab">Europa</div>
+                    <div class="tab">Titani</div>
+                </div>
+                
+                <h1>UDHËTIM <span>HËNOR</span></h1>
+                
+                <p>
+                    Përjetoni emocionin e ecjes në një botë tjetër. Ekspeditat tona hënore ju japin mundësinë të shihni Tokën nga hapësira, të vizitoni vendet historike të uljes dhe të përjetoni ndjesinë unike të lëvizjes në gravitet të ulët.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-label">Distanca</div>
+                        <div class="stat-value">384,400 KM</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Koha e udhëtimit</div>
+                        <div class="stat-value">3 DITË</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Graviteti</div>
+                        <div class="stat-value">1.62 M/S²</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo1.jpg" alt="Logo">
+                <h3>UDHËTIM QIELLOR</h3>
+            </div>
+            <div class="footer-links">
+                
+                <ul>
+                    <li><a href="politikat.html">Politikat e privatsisë</a></li>
+                    <li><a href="kushtet.html">Kushtet e shërbimit</a></li>
+                    <li><a href="nakontaktoni.html">Na kontaktoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Na ndiqni</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook1.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="images/x2.jpg" alt="X"></a>
+                    <a href="#"><img src="images/instagram1.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UDHËTIM QIELLOR. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+</body>
+</html> 
