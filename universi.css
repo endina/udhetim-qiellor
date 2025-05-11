@@ -179,14 +179,15 @@ p {
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
-    color: var(--space-grey);
+    color: #888888;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .tab a:hover,
 .tab a.active {
-    color: var(--space-blue);
-    border-bottom: 2px solid var(--space-blue);
+    color: #1e90ff;
+    border-bottom: 2px solid #1e90ff;
 }
 
 /* Footer */
@@ -358,6 +359,10 @@ footer {
     
     .stats {
         justify-content: center;
+    }
+    .tabs {
+        flex-direction: column;
+        align-items: center;
     }
    
 }
