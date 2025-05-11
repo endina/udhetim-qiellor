@@ -159,12 +159,8 @@ body {
     border-bottom-right-radius: 20px;
 
 }
-.card-content h3 {
-    color: #00c3ff;
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: Audiowide;
-}
+
+
 
 .card-content p {
     font-size: 20px;
@@ -178,11 +174,11 @@ body {
     font-weight: 600;
     background: rgba(0, 195, 255, 0.1);
     color: white;
-   display: inline flex;
-   margin-right: 10px;
-   gap: 15px;
-   background-color: rgb(55, 55, 71);
-   border-radius: 10px;
+    display: inline flex;
+    margin-right: 10px;
+    gap: 15px;
+    background-color: rgb(55, 55, 71);
+    border-radius: 10px;
     padding: 10px;
 }
     
@@ -191,7 +187,26 @@ body {
     font-size: 15px;
     margin-left: 10px;
 }
-   
+.date {
+    font-size: 20px;
+    color: #00c3ff;
+    margin-top: 10px;
+    font-weight: 600;
+    display: inline-flex; /* ✅ fixed here */
+    align-items: center;  /* ✅ vertical alignment */
+    gap: 12px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.date i {
+    font-size: 18px;
+    color: #00c3ff;
+    /* remove conflicting margins */
+    margin: 0; 
+}
+
 
 /* Footer */
 footer {
