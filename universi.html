@@ -8,9 +8,386 @@
     <title>UDHËTIM QIELLOR</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="universi.css">
+    
 </head>
 <body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: white;
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo img {
+    height: 65px;
+}
+
+.navbar-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 43px;
+    color: #00c3ff;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: #00c3ff;
+    color: #121212;
+}
+
+ /* Additional styles for Universi page */
+ .destination-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    gap: 20px;
+    
+}
+.cosmic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.cosmic-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cosmic-title {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.cosmic-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #aaa;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.planet-navigation {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .planet-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0d1b2a;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .planet-link:hover {
+    background-color: #1f4068;
+  }
+  
+
+.destination-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.destination-image {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 20px 40px rgba(0, 195, 255, 0.2);
+}
+
+.destination-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.planet-name {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.planet-description {
+    font-family: 'Poppins', sans-serif;
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.planet-facts {
+    display: flex;
+    gap: 40px;
+}
+
+.fact-group {
+    flex: 1;
+}
+
+.fact-label {
+    font-family: 'Poppins', sans-serif;
+    color: #00c3ff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.fact-value {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* Alternate layout for even items */
+.destination-content:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Footer */
+footer {
+    background-color: #101010;
+    padding: 50px 20px 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00c3ff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00c3ff;
+}
+
+.footer-socials .social-icons a {
+    margin: 0 10px;
+}
+
+.footer-socials img {
+    height: 33px;
+}
+.footer-socials h4 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+}
+#menu-toggle:checked ~ .nav-list {
+    right: 0;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+   .image-buttons-section {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        position: fixed;
+        background-color:#1b2355;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -220px;
+        text-align: left;
+        z-index: 5;
+        transition: 0.3s;
+        padding-top: 60px;
+        display: block;
+    }
+    
+    .nav-list li {
+        display: block;
+        margin: 20px 0;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+    }
+
+    .close-icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .navbar-title{
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .navbar .logo img {
+        height: 50px;
+    }
+    .footer-logo h3 {
+        font-size: 1.2rem;
+    }
+    .footer-logo img {
+        height: 30px;
+    }
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    .footer-socials img {
+        height: 25px;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+    .footer-links ul li {
+        margin-bottom: 5px;
+    }
+    .destination-content {
+        flex-direction: column;
+    }
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
+    .destination-content:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .planet-facts {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .planet-name {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+    </style>
 
      <!-- Navbar -->
      <nav class="navbar">

@@ -65,138 +65,136 @@ body {
     color: #121212;
 }
 
- /* Additional styles for Universi page */
- .destination-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    gap: 20px;
-    
+:root {
+    --space-dark: #0A0E17;
+    --space-blue: #00c3ff;
+    --space-grey: #6B7280;
+    --space-light: #E0E7FF;
 }
-.cosmic-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-
-.cosmic-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-.cosmic-title {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+ /* Main Content - Space Theme */
+ .main-content {
+    flex: 1;
+    padding: 2rem;
+    background: 
+        linear-gradient(rgba(10, 14, 23, 0.9), rgba(10, 14, 23, 0.9)),
+        url('images/spaceimg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.cosmic-subtitle {
-    font-family: 'Poppins', sans-serif;
-    color: #aaa;
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-.section-title {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-.planet-navigation {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .planet-link {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #0d1b2a;
-    color: #fff;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .planet-link:hover {
-    background-color: #1f4068;
-  }
-  
-
-.destination-content {
+.moon-section {
     display: flex;
     align-items: center;
-    gap: 60px;
-    margin-bottom: 80px;
+    gap: 3rem;
+    margin: 3rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.destination-image {
+.moon-image {
     flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.moon-image img {
     width: 100%;
     max-width: 500px;
-    border-radius: 10px;
-    height: auto;
-    box-shadow: 0 20px 40px rgba(0, 195, 255, 0.2);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 30px rgba(0, 195, 255, 0.4));
+    animation: float 6s ease-in-out infinite;
 }
 
-.destination-info {
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.content {
     flex: 1;
     min-width: 300px;
 }
 
-.planet-name {
+.step-number {
     font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.planet-description {
-    font-family: 'Poppins', sans-serif;
-    color: #ddd;
-    line-height: 1.8;
+    color: var(--space-blue);
+    margin-bottom: 1rem;
     font-size: 1.1rem;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.planet-facts {
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--space-light);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+h1 span {
+    color: var(--space-blue);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.stats {
     display: flex;
-    gap: 40px;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.fact-group {
-    flex: 1;
+.stat {
+    border-left: 2px solid var(--space-blue);
+    padding-left: 1rem;
 }
 
-.fact-label {
-    font-family: 'Poppins', sans-serif;
-    color: #00c3ff;
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--space-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Destination tabs */
+.tabs {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tab {
+    cursor: pointer;
+    padding-bottom: 5px;
+    font-family: 'Orbitron', sans-serif;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    color: var(--space-grey);
+    transition: all 0.3s ease;
 }
 
-.fact-value {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 1.8rem;
+.tab:hover,
+.tab.active {
+    color: var(--space-blue);
+    border-bottom: 2px solid var(--space-blue);
+}
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
 }
 
-/* Alternate layout for even items */
-.destination-content:nth-child(even) {
-    flex-direction: row-reverse;
-}
+ 
 
 /* Footer */
 footer {
@@ -256,7 +254,6 @@ footer {
     margin-bottom: 15px;
     
 }
-
 .footer-bottom {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -350,26 +347,24 @@ footer {
     .footer-links ul li {
         margin-bottom: 5px;
     }
-    .destination-content {
-        flex-direction: column;
-    }
-    .footer-logo, .footer-links, .footer-socials {
+   .footer-logo, .footer-links, .footer-socials {
         margin-bottom: 20px;
     }
-    .destination-content:nth-child(even) {
+    .moon-section {
         flex-direction: column;
+        text-align: center;
     }
     
-    .planet-facts {
-        flex-direction: column;
-        gap: 20px;
+    .moon-image {
+        margin-bottom: 3rem;
     }
     
-    .planet-name {
-        font-size: 2.5rem;
+    p {
+        max-width: 100%;
     }
     
-    .section-title {
-        font-size: 2rem;
+    .stats {
+        justify-content: center;
     }
+   
 }
