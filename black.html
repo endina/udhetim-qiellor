@@ -36,11 +36,13 @@
         </ul>
         
     </nav>
-    <div class="planet-navigation">
-        <a href="universi.html" class="planet-link">01</a>
-        <a href="black.html" class="planet-link active">02</a>
-      </div>
-      
+    <div class="tabs">
+        <div class="tab"><a href="universi1.html" >Toka</a></div>
+        <div class="tab"><a href="universi.html">Planetët</a></div>
+        <div class="tab"><a href="black.html" class="active">Vrimat e Zeza</a></div>
+        <div class="tab"><a href="black.html">Satelitët</a></div>
+    </div>
+    
     
     <style>
 * {
@@ -147,27 +149,31 @@ body {
     background-color: #00c3ff;
     color: #121212;
 }
-.planet-navigation {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .planet-link {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #0d1b2a;
-    color: #fff;
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-top: 40px;
+   
+}
+
+.tab a {
+    cursor: pointer;
+    padding-bottom: 5px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 18px;
-    border-radius: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #888888;
+    transition: all 0.3s ease;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .planet-link:hover {
-    background-color: #1f4068;
-  }
+}
+
+.tab a:hover,
+.tab a.active {
+color: #1e90ff;
+border-bottom: 2px solid #1e90ff;
+}
 
 /* Unique styles for this page */
 .cosmic-container {

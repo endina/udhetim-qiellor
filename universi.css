@@ -121,7 +121,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     color: var(--space-blue);
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 26px;
 }
 
 h1 {
@@ -173,28 +173,21 @@ p {
     margin-bottom: 2rem;
 }
 
-.tab {
+.tab a{
     cursor: pointer;
     padding-bottom: 5px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
+    font-size: 15px;
     text-transform: uppercase;
     color: var(--space-grey);
     transition: all 0.3s ease;
 }
 
-.tab:hover,
-.tab.active {
+.tab a:hover,
+.tab a.active {
     color: var(--space-blue);
     border-bottom: 2px solid var(--space-blue);
 }
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #777;
-}
-
- 
 
 /* Footer */
 footer {
