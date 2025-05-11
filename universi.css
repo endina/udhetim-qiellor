@@ -109,7 +109,7 @@ html, body {
 .moon-image img {
     width: 100%;
     max-width: 500px;
-    border-radius: 50%;
+    border-radius: 20%;
     filter: drop-shadow(0 0 30px rgba(0, 195, 255, 0.4));
     animation: float 6s ease-in-out infinite;
 }
