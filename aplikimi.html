@@ -16,7 +16,7 @@
             <h1 class="form-title">Aplikoni për Kurset Tona të Astronomisë</h1>
             <p class="form-intro">Plotësoni formularin për t'u regjistruar në kurset tona. Do t'ju kontaktojmë pas shqyrtimit.</p>
             
-            <form id="courseForm" action="#" method="post">
+            <form id="courseForm"  onsubmit="sendEmail(event)" action="#" method="post">
                 <!-- Personal Information -->
                 <div class="form-section">
                     <h3 class="section-title">Informacionet Personale</h3>
@@ -114,6 +114,28 @@
             </div>
             </div>
     </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("P7Hb1KZU0J_DqZW3Q"); // Replace with your public key (NOT the secret one!)
+   })();
+</script>
+<script>
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_92zyg7r', 'template_yv2ng57', '#courseForm')
+    .then(function(response) {
+        alert("Aplikimi u dërgua me sukses!");
+        document.getElementById("courseForm").reset();
+    }, function(error) {
+        alert("Ndodhi një gabim. Ju lutem provoni përsëri.");
+        console.log(error);
+    });
+}
+</script>
+
+
   
 </body>
 </html>

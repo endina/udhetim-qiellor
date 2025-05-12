@@ -176,12 +176,14 @@ p {
 /* Destination tabs */
 .tabs {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-top: 40px;
+   
 }
 
-.tab a{
+.tab a {
     cursor: pointer;
     padding-bottom: 5px;
     font-family: 'Orbitron', sans-serif;
@@ -194,8 +196,8 @@ p {
 
 .tab a:hover,
 .tab a.active {
-    color: #1e90ff;
-    border-bottom: 2px solid #1e90ff;
+color: #1e90ff;
+border-bottom: 2px solid #1e90ff;
 }
 
 /* Footer */
