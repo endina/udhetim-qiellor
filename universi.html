@@ -8,6 +8,10 @@
     <title>UDHËTIM QIELLOR</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
     
 </head>
 <body>
@@ -148,7 +152,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
-    color: #888888;
+    color: white;
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -168,12 +172,27 @@ border-bottom: 2px solid #1e90ff;
 }
 
 .destination-image {
-    flex: 1;
+    
     width: 100%;
     max-width: 500px;
-    border-radius: 10px;
     height: auto;
-    box-shadow: 0 20px 40px rgba(0, 195, 255, 0.2);
+    
+}
+.destination-image {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .destination-info {
@@ -227,6 +246,30 @@ border-bottom: 2px solid #1e90ff;
 .destination-content:nth-child(even) {
     flex-direction: row-reverse;
 }
+.modal-content {
+  background: radial-gradient(circle at top left, #111 30%, #000 100%);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4), 0 0 80px rgba(0, 100, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  font-family: 'Orbitron', sans-serif; /* optional futuristic font */
+}
+
+.modal-title {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.modal-body {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn-close-white {
+  filter: brightness(200%);
+}
+
 
 /* Footer */
 footer {
@@ -453,7 +496,7 @@ footer {
         
           <!-- Earth -->
         <div class="destination-content">
-            <img src="images/earth2.jpg" alt="Earth" class="destination-image">
+            <img src="images/earth13.jpg" alt="Toka" class="destination-image" data-bs-toggle="modal" data-bs-target="#earthModal">
             <div class="destination-info">
                 <h2 class="planet-name">Toka</h2>
                 <p class="planet-description">
@@ -474,7 +517,7 @@ footer {
         
         <!-- Mars -->
         <div class="destination-content">
-            <img src="images/mars.jpg" alt="Mars" class="destination-image">
+            <img src="images/mars4.jpg" alt="Mars" class="destination-image">
             <div class="destination-info">
                 <h2 class="planet-name">Marsi</h2>
                 <p class="planet-description">
@@ -508,7 +551,7 @@ footer {
                     </div>
                     <div class="fact-group">
                         <div class="fact-label">Kohë Udhetimi</div>
-                        <div class="fact-value">6 VIT</div>
+                        <div class="fact-value">6 VITE</div>
                     </div>
                 </div>
             </div>
@@ -516,20 +559,21 @@ footer {
         
         <!-- Saturn -->
         <div class="destination-content">
-            <img src="images/saturn.jpg" alt="Saturn" class="destination-image">
+            <img src="images/neptun.jpg" alt="Saturn" class="destination-image">
             <div class="destination-info">
-                <h2 class="planet-name">Saturni</h2>
+                <h2 class="planet-name">Neptuni</h2>
                 <p class="planet-description">
-                    Saturni është planeti i gjashtë nga Dielli dhe është i njohur për unazat e tij mbresëlënëse dhe të jashtëzakonshme. Ai është një planet gjigand i gaztë, kryesisht i përbërë nga hidrogjeni dhe heliumi, dhe është planeti i dytë më i madh në sistemin diellor pas Jupiterit. Unazat e Saturnit janë më të mëdhatë dhe më të dallueshmet nga çdo planet tjetër, duke përbërë një sistem të ndërlikuar me pjesë të ngurtë dhe të lëngshme. Ato janë të krijuara nga grimca të akullit, pluhurit dhe materialeve të tjera që janë të lidhura rreth planetit. 
+                    Neptuni është planeti i tetë dhe më i largët i njohur nga Dielli në sistemin ton diellor. Është një gjigant akulli, i ngjashëm me Uranin, dhe përbëhet kryesisht nga hidrogjen, helium dhe traca metani. Atmosfera e Neptunit është jashtëzakonisht dinamike, me erat më të forta në sistemin diellor, që arrijnë shpejtësi deri në 2,100 km/h (1,300 mph).
+                   
                 </p>
                 <div class="planet-facts">
                     <div class="fact-group">
                         <div class="fact-label">Distanca Mesatare</div>
-                        <div class="fact-value">1.43 MILIARD KM</div>
+                        <div class="fact-value">4.5 MILIARD KM</div>
                     </div>
                     <div class="fact-group">
                         <div class="fact-label">Kohë Udhetimi</div>
-                        <div class="fact-value">7 VIT</div>
+                        <div class="fact-value">12 VITE</div>
                     </div>
                 </div>
             </div>
@@ -564,6 +608,22 @@ footer {
             <p>&copy; 2025 UDHËTIM QIELLOR. Të gjitha të drejtat e rezervuara.</p>
         </div>
     </footer>
+
+    <!-- Earth Info Modal -->
+<div class="modal fade" id="earthModal" tabindex="-1" aria-labelledby="earthModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="earthModalLabel">Më shumë rreth Tokës</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Mbyll"></button>
+      </div>
+      <div class="modal-body">
+        🌍 <strong>Toka</strong> është planeti ynë dhe i vetmi që mbështet jetë.  
+        Ajo ka atmosferë të pasur me oksigjen dhe ujë në sipërfaqe.  
+        <br><br>
+        🔹 Rrotullohet çdo 24 orë  
+        🔹 Është planeti i tret
+
 
 </body>
 </html> 
