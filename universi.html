@@ -179,11 +179,16 @@ border-bottom: 2px solid #1e90ff;
     
 }
 .destination-image {
-  width: 300px;
+  width: 100%;
+  max-width: 300px; 
   height: auto;
   border-radius: 50%;
   animation: spin 20s linear infinite;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 60px auto 30px auto;
 }
 
 @keyframes spin {
@@ -246,31 +251,6 @@ border-bottom: 2px solid #1e90ff;
 .destination-content:nth-child(even) {
     flex-direction: row-reverse;
 }
-.modal-content {
-  background: radial-gradient(circle at top left, #111 30%, #000 100%);
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4), 0 0 80px rgba(0, 100, 255, 0.2);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-  font-family: 'Orbitron', sans-serif; /* optional futuristic font */
-}
-
-.modal-title {
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff;
-}
-
-.modal-body {
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.btn-close-white {
-  filter: brightness(200%);
-}
-
-
 /* Footer */
 footer {
     background-color: #101010;
@@ -371,6 +351,10 @@ footer {
         transition: 0.3s;
         padding-top: 60px;
         display: block;
+      }
+    .navbar{
+        padding-top: 80px;
+        padding: 10px 15px;
     }
     
     .nav-list li {
@@ -401,8 +385,7 @@ footer {
         margin: auto;
         text-align: center;
     }
-
-    .navbar .logo img {
+   .navbar .logo img {
         height: 50px;
     }
     .footer-logo h3 {
@@ -448,6 +431,37 @@ footer {
     .tabs {
         flex-direction: column;
         align-items: center;
+    }
+    .destination-image {
+    max-width: 200px;
+    margin-top: 80px;
+  }
+    .destination-info {
+        min-width: 100%;
+    }
+    .destination-content {
+        margin-bottom: 40px;
+    }
+    .destination-image {
+        max-width: 300px; 
+        height: auto;
+        border-radius: 50%;
+        animation: spin 20s linear infinite;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    .destination-image {
+        max-width: 200px;
+        margin-top: 80px;
+    }
+    .destination-info {
+        min-width: 100%;
+    }
+    .destination-content {
+        margin-bottom: 40px;
     }
 }
     </style>
@@ -496,7 +510,7 @@ footer {
         
           <!-- Earth -->
         <div class="destination-content">
-            <img src="images/earth13.jpg" alt="Toka" class="destination-image" data-bs-toggle="modal" data-bs-target="#earthModal">
+            <img src="images/earth13.jpg" alt="Toka" class="destination-image img-fluid">
             <div class="destination-info">
                 <h2 class="planet-name">Toka</h2>
                 <p class="planet-description">
@@ -609,21 +623,6 @@ footer {
         </div>
     </footer>
 
-    <!-- Earth Info Modal -->
-<div class="modal fade" id="earthModal" tabindex="-1" aria-labelledby="earthModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title" id="earthModalLabel">Më shumë rreth Tokës</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Mbyll"></button>
-      </div>
-      <div class="modal-body">
-        🌍 <strong>Toka</strong> është planeti ynë dhe i vetmi që mbështet jetë.  
-        Ajo ka atmosferë të pasur me oksigjen dhe ujë në sipërfaqe.  
-        <br><br>
-        🔹 Rrotullohet çdo 24 orë  
-        🔹 Është planeti i tret
-
-
+  
 </body>
 </html> 

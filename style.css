@@ -177,7 +177,30 @@ body {
 .image-container .btn:hover {
     background-color: #0088cc;
 }
+.observatory-title {
+  font-size: 1.4rem;
+  color: #81cbf0;
+  margin-bottom: 15px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  padding-left: 25px;
+  text-shadow: 0 0 5px #00ff41;
+}
 
+.observatory-title::before {
+  content: '>';
+  position: absolute;
+  left: 10px;
+  color: #0088cc;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 /* CTA Section */
 .cta-section {
     display: flex;
